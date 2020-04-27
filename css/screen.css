@@ -5,22 +5,19 @@
 @font-face {
     font-family: "HK Grotesk Web";
     font-weight: 200;
-    src: url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2"),
-         url("../fonts/hkgrotesk-light-webfont.woff") format("woff");
+    src: url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-light-webfont.woff") format("woff");
 }
 
 @font-face {
     font-family: "HK Grotesk Web";
     font-weight: 400;
-    src: url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"),
-         url("../fonts/hkgrotesk-regular-webfont.woff") format("woff");
+    src: url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-regular-webfont.woff") format("woff");
 }
 
 @font-face {
     font-family: "HK Grotesk Web";
     font-weight: 600;
-    src: url("../fonts/hkgrotesk-medium-webfont.woff2") format("woff2"),
-         url("../fonts/hkgrotesk-medium-webfont.woff") format("woff");
+    src: url("../fonts/hkgrotesk-medium-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-medium-webfont.woff") format("woff");
 }
 
 /*------------------------------------*\
@@ -43,9 +40,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
@@ -90,9 +85,7 @@ img {
     Default markup for typographic elements
 */
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 200;
 }
 
@@ -114,31 +107,21 @@ h3 {
     margin: 0 0 24px;
 }
 
-h4,
-h5,
-h6 {
+h4, h5, h6 {
     font-size: 20px;
     line-height: 24px;
     margin: 0 0 24px;
 }
 
-p,
-ol,
-ul,
-dl,
-table,
-address,
-figure {
+p, ol, ul, dl, table, address, figure {
     margin: 0 0 24px;
 }
 
-ul,
-ol {
+ul, ol {
     padding-left: 24px;
 }
 
-li ul,
-li ol {
+li ul, li ol {
     margin-bottom: 0;
 }
 
@@ -174,13 +157,11 @@ a {
     transition: all .1s ease-in-out;
 }
 
-a:visited,
-a:active {
+a:visited, a:active {
     color: #3E3EA8;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
     color: #3E3EA8;
 }
 
@@ -197,7 +178,8 @@ a:focus {
 .o-row {
     position: relative;
     padding: 24px 24px 0;
-    display: flow-root; /* New solution! Fixes margin collapsing */
+    display: flow-root;
+    /* New solution! Fixes margin collapsing */
 }
 
 /* color modifiers */
@@ -222,12 +204,10 @@ a:focus {
         padding-left: 48px;
         padding-right: 48px;
     }
-
     .o-row--md {
         padding-top: 48px;
         padding-bottom: 24px;
     }
-
     .o-row--lg {
         padding-top: 72px;
         padding-bottom: 48px;
@@ -250,7 +230,8 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 56.4em; /* 56.4 * 20px = 1128px */
+    max-width: 56.4em;
+    /* 56.4 * 20px = 1128px */
 }
 
 /*
@@ -260,22 +241,22 @@ a:focus {
 */
 
 .o-section {
-    display: flow-root; /* New solution! Fixes margin collapsing */
+    display: flow-root;
+    /* New solution! Fixes margin collapsing */
 }
 
-.o-section + .o-section {
+.o-section+.o-section {
     padding-top: 24px;
 }
 
 @media (min-width: 768px) {
-    .o-section--lg + .o-section--lg,
-    .o-section--xl + .o-section--xl {
+    .o-section--lg+.o-section--lg, .o-section--xl+.o-section--xl {
         padding-top: 48px;
     }
 }
 
 @media (min-width: 1200px) {
-    .o-section--xl + .o-section--xl {
+    .o-section--xl+.o-section--xl {
         padding-top: 72px;
     }
 }
@@ -295,9 +276,9 @@ a:focus {
     flex-wrap: wrap;
 }
 
-    .o-layout__item {
-        flex-basis: 100%;
-    }
+.o-layout__item {
+    flex-basis: 100%;
+}
 
 /* gutter modifiers, these affect o-layout__item too */
 
@@ -305,7 +286,7 @@ a:focus {
     margin: 0 -12px;
 }
 
-.o-layout--gutter > .o-layout__item {
+.o-layout--gutter>.o-layout__item {
     padding: 0 12px;
 }
 
@@ -313,7 +294,7 @@ a:focus {
     margin: 0 -6px;
 }
 
-.o-layout--gutter-sm > .o-layout__item {
+.o-layout--gutter-sm>.o-layout__item {
     padding: 0 6px;
 }
 
@@ -321,7 +302,7 @@ a:focus {
     margin: 0 -24px;
 }
 
-.o-layout--gutter-lg > .o-layout__item {
+.o-layout--gutter-lg>.o-layout__item {
     padding: 0 24px;
 }
 
@@ -421,18 +402,14 @@ a:focus {
     width: auto;
     overflow: visible;
     background: transparent;
-
     /* inherit font & color from ancestor */
     color: inherit;
     font: inherit;
-
     /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
     line-height: normal;
-
     /* Corrects font smoothing for webkit */
     -webkit-font-smoothing: inherit;
     -moz-osx-font-smoothing: inherit;
-
     /* Corrects inability to style clickable `input` types in iOS */
     -webkit-appearance: none;
 }
@@ -483,7 +460,6 @@ a:focus {
     .c-header__nav {
         display: block;
     }
-
     .c-header__nav--main {
         position: absolute;
         top: 50%;
@@ -491,7 +467,6 @@ a:focus {
         transform: translate(-50%, -50%);
         margin-top: 12px;
     }
-
     .c-header__mobile-nav-trigger {
         display: none;
     }
@@ -521,13 +496,11 @@ a:focus {
         justify-content: center;
         align-items: center;
     }
-
     .c-footer__logo {
         display: flex;
         justify-content: center;
         padding: 0 12px;
     }
-
     .c-footer__nav {
         width: auto;
         padding: 0 16px;
@@ -538,24 +511,19 @@ a:focus {
     .c-footer {
         justify-content: space-between;
     }
-
     .c-footer__nav {
         padding: 0;
     }
-
-    .c-footer__logo + .c-footer__nav {
+    .c-footer__logo+.c-footer__nav {
         order: -1;
     }
-
     .c-footer__logo {
         width: auto;
     }
-
     /*
         Bonus: real centering with CSS
         Checkout: https://css-tricks.com/centering-css-complete-guide/
     */
-
     /* .c-footer__logo {
         width: auto;
         position: absolute;
@@ -605,21 +573,15 @@ a:focus {
     padding: 8px 0;
 }
 
-.c-nav__link,
-.c-nav__link:visited,
-.c-nav__link:active {
+.c-nav__link, .c-nav__link:visited, .c-nav__link:active {
     color: #202024;
 }
 
-.c-nav__link--meta,
-.c-nav__link--meta:visited,
-.c-nav__link--meta:active {
+.c-nav__link--meta, .c-nav__link--meta:visited, .c-nav__link--meta:active {
     color: #6C6C75;
 }
 
-.is-selected .c-nav__link,
-.c-nav__link:hover,
-.c-nav__link:focus {
+.is-selected .c-nav__link, .c-nav__link:hover, .c-nav__link:focus {
     color: #5051db;
 }
 
@@ -629,7 +591,6 @@ a:focus {
         margin-left: -16px;
         margin-right: -16px;
     }
-
     .c-nav__link {
         padding: 8px 16px;
     }
@@ -670,17 +631,14 @@ a:focus {
         font-size: 23px;
         line-height: 32px;
     }
-
     .c-lead--xl {
         font-size: 32px;
         line-height: 40px;
     }
-
     .c-lead--xxl {
         font-size: 41px;
         line-height: 48px;
     }
-
     .c-lead--xxxl {
         font-size: 52px;
         line-height: 64px;
@@ -692,17 +650,14 @@ a:focus {
         font-size: 26px;
         line-height: 36px;
     }
-
     .c-lead--xl {
         font-size: 36px;
         line-height: 48px;
     }
-
     .c-lead--xxl {
         font-size: 52px;
         line-height: 64px;
     }
-
     .c-lead--xxxl {
         font-size: 66px;
         line-height: 72px;
@@ -787,9 +742,7 @@ a:focus {
     transition: color .175s ease-in;
 }
 
-.c-link-cta,
-.c-link-cta:visited,
-.c-link-cta:active {
+.c-link-cta, .c-link-cta:visited, .c-link-cta:active {
     color: #7373F5;
 }
 
@@ -820,16 +773,89 @@ a:focus {
 
 /* inversed */
 
-.c-link-cta--inverse,
-.c-link-cta--inverse:visited,
-.c-link-cta--inverse:active,
-.c-link-cta--inverse:hover {
+.c-link-cta--inverse, .c-link-cta--inverse:visited, .c-link-cta--inverse:active, .c-link-cta--inverse:hover {
     color: #fff;
 }
 
-.c-link-cta--inverse::after,
-.c-link-cta--inverse:hover::after {
+.c-link-cta--inverse::after, .c-link-cta--inverse:hover::after {
     background-color: #fff;
+}
+
+/*
+    Component: mobile nav
+    ---
+    Dedicated mobile nav component
+*/
+
+.c-mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.has-mobile-nav .c-mobile-nav {
+    pointer-events: auto;
+}
+
+.c-mobile-nav__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.c-mobile-nav__bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity .25s ease;
+}
+
+.has-mobile-nav .c-mobile-nav__bg {
+    opacity: .5;
+    background-color: #202024;
+}
+
+.c-mobile-nav__body {
+    position: relative;
+    padding: 24px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+}
+
+.has-mobile-nav .c-mobile-nav__body {
+transform: translateX(0);
+}
+
+.c-page {
+    transform: translateX(0);
+    transition: transform .25s ease;
+}
+
+.has-mobile-nav .c-page {
+    transform: translateX(25%);
+}
+
+@media (min-width: 768px) {
+    .c-mobile-nav__body {
+        padding: 48px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Hide the mobile nav on larger viewports even whent it's open on smaller screens */
+    .c-mobile-nav {
+        display: none !important;
+    }
 }
 
 /*------------------------------------*\
@@ -1161,9 +1187,7 @@ a:focus {
 */
 
 @media print {
-    *,
-    *:before,
-    *:after {
+    *, *:before, *:after {
         background: transparent !important;
         color: #000 !important;
         /* Black prints faster:
@@ -1171,8 +1195,7 @@ a:focus {
         box-shadow: none !important;
         text-shadow: none !important;
     }
-    a,
-    a:visited {
+    a, a:visited {
         text-decoration: underline;
     }
     a[href]:after {
@@ -1185,15 +1208,13 @@ a:focus {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    a[href^="#"]:after, a[href^="javascript:"]:after {
         content: "";
     }
     pre {
         white-space: pre-wrap !important;
     }
-    pre,
-    blockquote {
+    pre, blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
@@ -1204,18 +1225,14 @@ a:focus {
     thead {
         display: table-header-group;
     }
-    tr,
-    img {
+    tr, img {
         page-break-inside: avoid;
     }
-    p,
-    h2,
-    h3 {
+    p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
-    h2,
-    h3 {
+    h2, h3 {
         page-break-after: avoid;
     }
 }
